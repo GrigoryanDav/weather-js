@@ -33,8 +33,23 @@ body, html {
     outline: none;
 }
 
+.search-part i {
+    color: white;
+    cursor: pointer;
+    padding: 10px;
+}
 
-#city-name {
+.search-part i:hover {
+    opacity: 0.7;
+}
+
+.search-part i:active {
+    opacity: 0.5;
+}
+
+
+.city-name {
+    position: relative;
     background-color: white;
     grid-area: city-name;
     display: flex;
@@ -45,7 +60,20 @@ body, html {
     box-shadow: 0 4px 10px rgba(0,0,0,0.5);
 }
 
-#country-code {
+.city-name i {
+    position: absolute;
+    left: 10px;
+    top: 10px;
+}
+
+.city-name p {
+    position: absolute;
+    left: 10px;
+    bottom: 0;
+    font-size: 20px;
+}
+
+.country-code {
     background-color: white;
     grid-area: country-code;
     display: flex;
@@ -54,9 +82,17 @@ body, html {
     font-size: 30px;
     font-weight: bold;
     box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+    position: relative;
 }
 
-#temperature {
+.country-code p {
+    position: absolute;
+    left: 10px;
+    bottom: 0;
+    font-size: 20px;
+}
+
+.temperature {
     background-color: white;
     grid-area: temperature;
     display: flex;
@@ -66,4 +102,26 @@ body, html {
     font-weight: bold;
     text-transform: uppercase;
     box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+    position: relative;
+}
+
+.temperature p {
+    position: absolute;
+    left: 10px;
+    bottom: 0;
+    font-size: 20px;
+    text-transform: capitalize;
+}
+
+.fa-thermometer-half {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+.fa-sun {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: yellow;
 }

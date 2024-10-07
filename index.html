@@ -4,16 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
     <div class="container">
         <div class="search-part">
             <input type="text" id="input-search">
+            <i class="fas fa-search fa-3x"></i>
         </div>
-        <div id="city-name"></div>
-        <div id="country-code"></div>
-        <div id="temperature"></div>
+        <div class="city-name">
+            <i class="fa fa-map-marker-alt"></i>
+            <p>City</p>
+            <h2 id="city-name"></h2>
+        </div>
+        <div class="country-code">
+            <p>Country</p>
+            <h2 id="country-code"></h2>
+        </div>
+        <div class="temperature">
+            <i class="fas fa-thermometer-half"></i>
+            <i class="fas fa-sun"></i>
+            <p>Temperature</p>
+            <h2 id="temperature"></h2>
+        </div>
     </div>
     <script src="./script.js"></script>
 </body>
