@@ -2,6 +2,7 @@ body, html {
     margin: 0;
     padding: 0;
     background-color: rgb(205, 205, 205);
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .container {
@@ -119,9 +120,16 @@ body, html {
     left: 10px;
 }
 
-.fa-sun {
+.fa-sun{
     position: absolute;
     top: 10px;
     right: 10px;
     color: yellow;
+}
+
+.fa-moon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: blueviolet;
 }
