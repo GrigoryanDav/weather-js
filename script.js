@@ -27,7 +27,6 @@ async function getWeather({ city = null, lat = null, lon = null }) {
             throw new Error(`HTTP error! status: ${response.status}`);
         }
         const data = await response.json();
-        console.log(data)
         const temperature = data.main.temp;
         const countryCode = data.sys.country;
         const nameOfCity = data.name;
@@ -36,10 +35,8 @@ async function getWeather({ city = null, lat = null, lon = null }) {
         const sunset = data.sys.sunset * 1000
 
         const currentTime = Date.now()
-        console.log(sunrise, sunset, currentTime)
 
         const isDaytime = currentTime >= sunrise && currentTime < sunset
-        console.log(isDaytime)
 
         return { temperature, countryCode, nameOfCity, isDaytime };
     } catch (error) {
@@ -57,10 +54,8 @@ async function updateWeatherByCity(city) {
         dayTimeIcon.classList.remove('fa-sun')
         dayTimeIcon.classList.remove('fa-moon')
         if (isDaytime) {
-            console.log('day')
             dayTimeIcon.classList.add('fa-sun')
         } else {
-            console.log('night')
             dayTimeIcon.classList.add('fa-moon')
         }
     } catch (error) {
@@ -83,10 +78,8 @@ async function updateWeatherByGeolocation() {
                 dayTimeIcon.classList.remove('fa-sun')
                 dayTimeIcon.classList.remove('fa-moon')
                 if (isDaytime) {
-                    console.log('day')
                     dayTimeIcon.classList.add('fa-sun')
                 } else {
-                    console.log('night')
                     dayTimeIcon.classList.add('fa-moon')
                 }
             } catch (error) {
