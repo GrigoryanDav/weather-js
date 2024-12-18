@@ -4,7 +4,7 @@ const codeOfCountry = document.getElementById('country-code');
 const tempOfCity = document.getElementById('temperature');
 const searchButton = document.querySelector('.fa-search')
 const dayTimeIcon = document.getElementById('day-Time-Icon')
-const apiKey = "YOUR_API_KEY";
+const apiKey = "e5b3f49657b2ccff409c34647081d13b";
 
 
 async function getWeather({ city = null, lat = null, lon = null }) {
@@ -15,7 +15,7 @@ async function getWeather({ city = null, lat = null, lon = null }) {
     } else if (lat && lon) {
         url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric`;
     } else {
-        throw new Error('Не указаны ни координаты, ни название города');
+        throw new Error('Neither coordinates nor city name are provided');
     }
 
     try {
@@ -59,7 +59,7 @@ async function updateWeatherByCity(city) {
             dayTimeIcon.classList.add('fa-moon')
         }
     } catch (error) {
-        console.error('Ошибка при обновлении информации о погоде:', error);
+        console.error('Error updating weather information:', error);
     }
 }
 
